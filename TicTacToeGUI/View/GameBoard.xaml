@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="GameBoard" Height="500" Width="450" ResizeMode="NoResize" 
         DataContext="{StaticResource gameBoardViewModel}">
+    
+    <Window.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="Border" 
+                                BorderThickness="0"
+                                Padding="4,2"
+                                BorderBrush="DarkGray"
+                                CornerRadius="3"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <DockPanel LastChildFill="true">
             <Menu DockPanel.Dock="Top">
@@ -16,11 +39,14 @@
                     </MenuItem>
                 </MenuItem>
             </Menu>
-            <Grid>
+            
+            <Grid Background="WhiteSmoke">
+                
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1" Margin="20" >
+
+                <Grid Margin="20" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
@@ -31,9 +57,52 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    
 
+                    <Border Grid.Row="0" Grid.Column="0" BorderBrush="DarkGray" BorderThickness="2">
+                        <Button Background="Transparent" Style="{StaticResource MyButtonStyle}" Command="{Binding PressTestCmd}">
+                            
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="1" BorderBrush="DarkGray" BorderThickness="2">
+                        <Button Background="Transparent" Style="{StaticResource MyButtonStyle}" Command="{Binding PressTestCmd}">
 
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="2" BorderBrush="DarkGray" BorderThickness="2">
+                        <Button Background="Transparent" Style="{StaticResource MyButtonStyle}" Command="{Binding PressTestCmd}">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="0" BorderBrush="DarkGray" BorderThickness="2">
+                        <Button Background="Transparent" Style="{StaticResource MyButtonStyle}" Command="{Binding PressTestCmd}">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="1" BorderBrush="DarkGray" BorderThickness="2">
+                        <Button Background="Transparent" Style="{StaticResource MyButtonStyle}" Command="{Binding PressTestCmd}">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="2" BorderBrush="DarkGray" BorderThickness="2">
+                        <Button Background="Transparent" Style="{StaticResource MyButtonStyle}" Command="{Binding PressTestCmd}">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="0" BorderBrush="DarkGray" BorderThickness="2">
+                        <Button Background="Transparent" Style="{StaticResource MyButtonStyle}" Command="{Binding PressTestCmd}">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="1" BorderBrush="DarkGray" BorderThickness="2">
+                        <Button Background="Transparent" Style="{StaticResource MyButtonStyle}" Command="{Binding PressTestCmd}">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="2" BorderBrush="DarkGray" BorderThickness="2">
+                        <Button Background="Transparent" Style="{StaticResource MyButtonStyle}" Command="{Binding PressTestCmd}">
+
+                        </Button>
+                    </Border>
                 </Grid>
             </Grid>
         </DockPanel>
