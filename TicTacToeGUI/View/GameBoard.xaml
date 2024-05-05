@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToeGUI.View"
         mc:Ignorable="d"
-        Title="GameBoard" Height="500" Width="600" ResizeMode="NoResize"
+        Title="GameBoard" Height="500" Width="450" ResizeMode="NoResize" 
         DataContext="{StaticResource gameBoardViewModel}">
     <Grid>
         <DockPanel LastChildFill="true">
@@ -18,12 +18,23 @@
             </Menu>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="0" Background="DarkGray">
+                <Grid Grid.Column="1" Margin="20" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
 
-                </StackPanel>
+
+                </Grid>
             </Grid>
         </DockPanel>
     </Grid>
